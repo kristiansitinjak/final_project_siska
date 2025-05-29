@@ -17,7 +17,7 @@ jobs:
           aws-region: us-east-1
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no -i ${{ secrets.EC2_SSH_KEY }} ec2-user@ec2-public-ip << 'EOF'
+          ssh -o StrictHostKeyChecking=no -i ${{ secrets.EC2_HOST }} ec2-user@ec2-public-ip << 'EOF'
             cd final_project_siska
             git pull origin main
             npm install
