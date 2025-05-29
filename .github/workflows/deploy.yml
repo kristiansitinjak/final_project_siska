@@ -15,7 +15,7 @@ jobs:
         username: ec2-user
         key: ${{ secrets.EC2_KEY }}
         script: |
-          cd cloud-computing-final-project
+          cd final_project_siska
           git pull
           npm install
           pm2 restart all || pm2 start index.js --name "node-app"
